@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - BVP-Seva</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/logo.jpg" alt="BVP-Seva Logo" class="logo-img">
+            <h1>BVP-Seva</h1>
+        </div>
+        <div class="nav-items">
+            <a href="index.html">Home</a>
+            <a href="index.html#restaurants">Restaurants</a>
+            <a href="orders.html" class="active">My Orders</a>
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span id="cart-count">0</span>
+            </a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="orders-page">
+            <h2>My Orders</h2>
+            <div id="orders-list">
+                <!-- This will be populated by JavaScript -->
+                <div class="no-orders">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>No Orders Yet</h3>
+                    <p>Looks like you haven't placed any orders yet.</p>
+                    <a href="index.html" class="btn-primary" style="display: inline-block; margin-top: 1rem;">
+                        Start Ordering
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Footer content -->
+    </footer>
+
+    <script type="module" src="./js/orders.js"></script>
+</body>
+</html>
+

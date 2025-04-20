@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - BVP-Seva</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/logo.jpg" alt="BVP-Seva Logo" class="logo-img">
+            <h1>BVP-Seva</h1>
+        </div>
+        <div class="nav-items">
+            <a href="index.html">Home</a>
+            <a href="index.html#restaurants">Restaurants</a>
+            <a href="orders.html">My Orders</a>
+            <a href="cart.html" class="active">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span id="cart-count">0</span>
+            </a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="cart-page">
+            <h2>Your Cart</h2>
+            <div class="cart-items-container" id="cart-items">
+                <!-- Cart items will be dynamically loaded here -->
+            </div>
+            <div class="cart-summary">
+                <div class="summary-item">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+                <div class="summary-item">
+                    <span>Delivery Fee:</span>
+                    <span id="delivery-fee">₹40</span>
+                </div>
+                <div class="summary-item total">
+                    <span>Total:</span>
+                    <span id="total">₹0</span>
+                </div>
+                <button id="checkout-btn" class="btn-primary">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Footer content -->
+    </footer>
+
+    <script type="module" src="./js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BVP-Seva | Food Delivery</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/logo.jpg" alt="BVP-Seva Logo" class="logo-img">
+            <h1>BVP-Seva</h1>
+        </div>
+        <div class="nav-items">
+            <a href="index.html" class="active">Home</a>
+            <a href="#restaurants">Restaurants</a>
+            <a href="orders.html">My Orders</a>
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span id="cart-count">0</span>
+            </a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Hungry? We've got you covered!</h1>
+            <p>Order food from your favorite restaurants</p>
+            <div class="search-bar">
+                <button><i class="fas fa-search"></i></button>
+                <input type="text" id="search-input" placeholder="Search for restaurants, cuisines, or dishes...">
+            </div>
+        </div>
+        <div class="hero-images">
+            <img src="./images/food1.webp" alt="Delicious Food" class="floating-image">
+            <img src="./images/food2.webp" alt="Restaurant Food" class="floating-image">
+            <img src="./images/food3.webp" alt="Local Cuisine" class="floating-image">
+        </div>
+    </header>
+
+    <div class="main-container">
+        <main>
+            <section id="restaurants" class="restaurant-list">
+                <div class="container">
+                    <h2>Popular Restaurants</h2>
+                    <div class="restaurant-grid" id="restaurant-container">
+                        <!-- Sample Restaurant Cards (will be replaced by dynamic content) -->
+                        <div class="restaurant-card">
+                            <div class="restaurant-image-container">
+                                <span class="promoted-tag">Promoted</span>
+                                <img src="./images/food5.webp" alt="Domino's Pizza" 
+                                     onerror="this.src='./images/default-restaurant.jpg'">
+                            </div>
+                            <div class="restaurant-info">
+                                <div class="restaurant-header">
+                                    <h3>Domino's Pizza</h3>
+                                    <span class="rating good-rating">
+                                        <i class="fas fa-star"></i> 4.2
+                                    </span>
+                                </div>
+                                <div class="cuisine">Pizza, Italian, Fast Food</div>
+                                <div class="restaurant-meta">
+                                    <span class="meta-item">
+                                        <i class="far fa-clock"></i> 30-40 min
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-rupee-sign"></i> ₹200-600
+                                    </span>
+                                </div>
+                                <div class="restaurant-details">
+                                    <span class="meta-item">
+                                        <i class="fas fa-map-marker-alt"></i> Paschim Vihar
+                                    </span>
+                                    <div class="discount">
+                                        <i class="fas fa-tag"></i> 50% OFF up to ₹100
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add more sample restaurant cards -->
+                        <div class="restaurant-card">
+                            <div class="restaurant-image-container">
+                                <img src="./images/food6.webp" alt="McDonald's"
+                                     onerror="this.src='./images/default-restaurant.jpg'">
+                            </div>
+                            <div class="restaurant-info">
+                                <div class="restaurant-header">
+                                    <h3>McDonald's</h3>
+                                    <span class="rating good-rating">
+                                        <i class="fas fa-star"></i> 4.3
+                                    </span>
+                                </div>
+                                <div class="cuisine">Burgers, Fast Food</div>
+                                <div class="restaurant-meta">
+                                    <span class="meta-item">
+                                        <i class="far fa-clock"></i> 25-35 min
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-rupee-sign"></i> ₹100-500
+                                    </span>
+                                </div>
+                                <div class="restaurant-details">
+                                    <span class="meta-item">
+                                        <i class="fas fa-map-marker-alt"></i> BVP Food Court
+                                    </span>
+                                    <div class="discount">
+                                        <i class="fas fa-tag"></i> 20% OFF on combos
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="restaurant-card">
+                            <div class="restaurant-image-container">
+                                <span class="promoted-tag">Promoted</span>
+                                <img src="./images/food7.webp" alt="Biryani Blues"
+                                     onerror="this.src='./images/default-restaurant.jpg'">
+                            </div>
+                            <div class="restaurant-info">
+                                <div class="restaurant-header">
+                                    <h3>Biryani Blues</h3>
+                                    <span class="rating good-rating">
+                                        <i class="fas fa-star"></i> 4.4
+                                    </span>
+                                </div>
+                                <div class="cuisine">Biryani, North Indian, Mughlai</div>
+                                <div class="restaurant-meta">
+                                    <span class="meta-item">
+                                        <i class="far fa-clock"></i> 40-50 min
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-rupee-sign"></i> ₹200-800
+                                    </span>
+                                </div>
+                                <div class="restaurant-details">
+                                    <span class="meta-item">
+                                        <i class="fas fa-map-marker-alt"></i> Near Metro Station
+                                    </span>
+                                    <div class="discount">
+                                        <i class="fas fa-tag"></i> Free delivery
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cart" class="cart-section hidden">
+                <div class="container">
+                    <h2>Your Cart</h2>
+                    <div id="cart-items">
+                        <!-- Cart items will be loaded here -->
+                    </div>
+                    <div class="cart-total">
+                        <h3>Total: ₹<span id="cart-total-amount">0</span></h3>
+                        <button id="checkout-btn" class="btn-primary">Checkout</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="orders" class="orders-section hidden">
+                <div class="container">
+                    <h2>My Orders</h2>
+                    <div id="orders-container">
+                        <!-- Orders will be loaded here dynamically -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BVP-Seva</h3>
+                <p>Order food from your favorite restaurants with ease.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@bvpseva.com</p>
+                <p>Phone: +91 1234567890</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
